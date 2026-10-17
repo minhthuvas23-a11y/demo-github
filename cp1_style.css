@@ -1,0 +1,72 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.score-board {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Grid chính chia làm 4 cột, khoảng cách cố định */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #3498db;
+    height: 90px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.card.flipped {
+    background-color: #fff;
+    border: 2px solid #3498db;
+}
+
+.card.matched {
+    background-color: #2ecc71;
+    cursor: default;
+    visibility: hidden; /* Ẩn thẻ khi đã ghép đôi thành công */
+}
+
+/* Kiểu dáng cho dòng thông báo */
+.message-box {
+    height: 24px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #e74c3c; /* Mặc định màu đỏ cho thông báo chưa đúng */
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.message-box.success {
+    color: #2ecc71; /* Màu xanh khi chọn đúng */
+}

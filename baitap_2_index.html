@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hồ sơ cá nhân</title>
+  <link rel="stylesheet" href="baitap_2_style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <div class="logo">HS</div>
+      <div>
+        <h1>Hồ sơ cá nhân</h1>
+        <p>Tạo và lưu thông tin của bạn ngay trên trình duyệt</p>
+      </div>
+    </header>
+
+    <section class="layout">
+      <form id="profileForm" class="form-card">
+        <div class="section-heading">
+          <span class="heading-icon">✎</span>
+          <div>
+            <h2 id="formTitle">Tạo hồ sơ cá nhân</h2>
+            <p>Điền thông tin vào các ô bên dưới</p>
+          </div>
+        </div>
+
+        <label for="fullName">Họ và tên</label>
+        <input id="fullName" name="fullName" type="text" placeholder="Ví dụ: Nguyễn Văn An" autocomplete="name" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="name@example.com" autocomplete="email" required>
+
+        <label for="phone">Số điện thoại</label>
+        <input id="phone" name="phone" type="tel" placeholder="Ví dụ: 0912345678" autocomplete="tel" required>
+
+        <label for="address">Địa chỉ</label>
+        <input id="address" name="address" type="text" placeholder="Ví dụ: Thành phố Hồ Chí Minh" autocomplete="street-address" required>
+
+        <label for="avatarUrl">URL ảnh đại diện</label>
+        <input id="avatarUrl" name="avatarUrl" type="url" placeholder="https://example.com/avatar.jpg">
+        <p class="hint">Dán đường dẫn ảnh bắt đầu bằng https://. Nếu để trống, website sẽ dùng ảnh mặc định.</p>
+
+        <div class="form-actions">
+          <button class="primary-btn" type="submit" id="saveButton">Lưu hồ sơ</button>
+          <button class="secondary-btn" type="button" id="clearButton">Xóa nội dung</button>
+        </div>
+        <p id="statusMessage" class="status" role="status" aria-live="polite"></p>
+      </form>
+
+      <section class="profile-card" aria-labelledby="previewTitle">
+        <div class="preview-top">
+          <span class="preview-label">HỒ SƠ CỦA BẠN</span>
+          <span class="online-dot"></span>
+        </div>
+        <h2 id="previewTitle">Thông tin cá nhân</h2>
+        <img id="avatarPreview" class="avatar" src="https://i.pravatar.cc/240?img=12" alt="Ảnh đại diện">
+        <h3 id="namePreview">Tên của bạn</h3>
+        <p class="profile-subtitle">Hồ sơ cá nhân</p>
+
+        <div class="profile-details">
+          <div class="detail-row">
+            <span class="detail-icon">✉</span>
+            <div><small>Email</small><p id="emailPreview">Chưa cập nhật</p></div>
+          </div>
+          <div class="detail-row">
+            <span class="detail-icon">☎</span>
+            <div><small>Số điện thoại</small><p id="phonePreview">Chưa cập nhật</p></div>
+          </div>
+          <div class="detail-row">
+            <span class="detail-icon">⌖</span>
+            <div><small>Địa chỉ</small><p id="addressPreview">Chưa cập nhật</p></div>
+          </div>
+        </div>
+        <div class="profile-footer">
+          <span>✦ Hồ sơ của tôi</span>
+          <span id="savedIndicator">Chưa lưu</span>
+        </div>
+      </section>
+    </section>
+    <footer>Thông tin được lưu trên trình duyệt của bạn bằng localStorage.</footer>
+  </main>
+  <script src="baitap_2_script.js"></script>
+</body>
+</html>
